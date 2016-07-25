@@ -1,22 +1,16 @@
-// var userHeight = 10;
-// var userLeaf = "a";
-
-// for(var i = 0; i < userHeight; i++){
-//   console.log(userLeaf);
-// }
-
 var userHeight = document.getElementById("userHeight");
 var userLeaf = document.getElementById("userLeaf");
 var button = document.getElementById("treeGrown");
-
 button.addEventListener("click", growTree);
-
-  for (var i = 0; i < userHeight; i++){
-    console.log(userLeaf);
-  }
-
+var spacer = '';
 
 function growTree (clickEvent) {
-  console.log(userHeight.value + " " + userLeaf.value);
+  if (userLeaf.value === "" || userHeight.value === "")
+    alert("You must specify a height and tree leaf!")
+  for (var i = 0; i < userHeight.value; i++){
+    console.log(userLeaf.value);
+    spacer += 2;
+  }
 }
+
 
