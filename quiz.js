@@ -2,6 +2,15 @@ var userHeight = document.getElementById("userHeight");
 var userLeaf = document.getElementById("userLeaf");
 var button = document.getElementById("treeGrown");
 button.addEventListener("click", growTree);
+
+function enter(e) {
+  if (13 == e.keyCode) {
+    growTree()
+  }
+}
+
+document.addEventListener("keydown", enter);
+
 var growth = 1;
 
 function growTree (clickEvent) {
