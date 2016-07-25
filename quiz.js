@@ -11,11 +11,14 @@ function enter(e) {
 
 document.addEventListener("keydown", enter);
 
-var growth = 1;
 
 function growTree (clickEvent) {
-  if (userLeaf.value === "" || userHeight.value === "")
+  if (userLeaf.value === "" || userHeight.value === "") {
     alert("You must specify a height and tree leaf!")
+  } else {
+    console.log("GOOD TO GO!")
+  }
+var growth = 1;
   for (var i = 0; i < userHeight.value; i++){
     console.log(" ".repeat(userHeight.value-i) + userLeaf.value.repeat(growth));
     growth += 2;
